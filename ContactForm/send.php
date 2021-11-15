@@ -61,7 +61,7 @@ try {
     $mail->Subject = $subject;
 	$mail->msgHTML("Sent from : " . $email ."<br>". $message); //Can also add a HTML page
     //$mail->Body    = 'Hello, <i>Test</i>';
-    //$mail->AltBody = 'Hello, Test'; //Field that appears on servers that do not accept HTML Mail
+    //$mail->AltBody = 'Hello, Test';                       //Field that appears on servers that do not accept HTML Mail
 
     $mail->send();
     echo 'Message has been sent' ;
