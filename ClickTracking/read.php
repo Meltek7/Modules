@@ -45,6 +45,7 @@ $HitUpdate->execute([$ID]);
 	<?php
 	}else{
 		header("Location:index.php");
+		exit();
 	}
 	?>
 	</table>

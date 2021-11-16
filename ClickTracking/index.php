@@ -7,7 +7,7 @@ require_once("connect.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Language" content="en">
 <meta charset="utf-8">
-<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
 <title>Click Tracking</title>
 <style>
 	body{
