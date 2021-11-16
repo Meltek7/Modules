@@ -45,15 +45,15 @@ require_once("connect.php");
                 <h3><?php echo $Record["Question"]; ?></h3>
             </div>
             <div class="row">
-                <div class="col-md-3 text-center"><em><?php echo $PercentageAnswerOne; ?></em></div>
+                <div class="col-md-3 text-center"><em><?php echo "%" . $PercentageAnswerOne; ?></em></div>
                 <span class="col-md-6"><?php echo $Record["AnswerOne"]; ?></span>
             </div>
             <div class="row">
-                <div class="col-md-3 text-center"><em><?php echo $PercentageAnswerTwo ; ?></em></div>
+                <div class="col-md-3 text-center"><em><?php echo "%" . $PercentageAnswerTwo ; ?></em></div>
                 <span class="col-md-6"><?php echo $Record["AnswerTwo"]; ?></span>
             </div>
             <div class="row">
-                <div class="col-md-3 text-center"><em><?php echo  $PercentageAnswerThree ; ?></em></div>
+                <div class="col-md-3 text-center"><em><?php echo "%" . $PercentageAnswerThree ; ?></em></div>
                 <span class="col-md-6"><?php echo $Record["AnswerThree"]; ?></span>
             </div>
             <div class="row">
