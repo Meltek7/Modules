@@ -10,10 +10,10 @@ $ControlQuery        =    $DatabaseConnection->prepare("SELECT * FROM testsurvey
 $ControlQuery->execute([$IpAddress, $ElapsedTime, $_SESSION["SurveyId"]]);
 $ControlRowNumber    =    $ControlQuery->rowCount();
 if (!isset($Answer)) {
-    $text = "Please choose one.<br><a ' href='index.php'>Home</a>";
+    $text = "Please choose one.<br><a class='HomeLink' href='index.php'>Home</a>";
 } else {
     if ($ControlRowNumber > 0) {
-        $text =  "Warning<br /> For this question you voted before. Please try again at least 24 hour later.<br><a href='index.php'>Home</a>";
+        $text =  "<span class='WarningText' >Warning!</span><br />You voted before for this question. Please try again at least 24 hour later.<br><a class='HomeLink' href='index.php'>Home</a>";
     } else {
         if ($Answer == 1) {
             $Update    =    $DatabaseConnection->prepare("UPDATE testsurvey SET VoteNumberAnswerOne=VoteNumberAnswerOne+1, TotalVoters=TotalVoters+1");
@@ -25,7 +25,7 @@ if (!isset($Answer)) {
             $Update    =    $DatabaseConnection->prepare("UPDATE testsurvey SET VoteNumberAnswerThree=VoteNumberAnswerThree+1, TotalVoters=TotalVoters+1");
             $Update->execute();
         } else {
-            $text = "Error<br /> Unknown Error.Please try again later.";
+            $text = "<span class='WarningText' >Error</span><br /> Unknown Error.Please try again later.<br /><a class='HomeLink' href='index.php'>Home</a>";
         }
 
         $Add            =    $DatabaseConnection->prepare("INSERT INTO testsurvey_voters (Ipaddress, VoteDate) values (?, ?)");
@@ -33,9 +33,9 @@ if (!isset($Answer)) {
         $AddControl    =    $Add->rowCount();
 
         if ($AddControl > 0) {
-            $text = "Thank you for voting.<br /><a ' href='index.php'>Home</a>";
+            $text = "Thank you for voting.<br /><a class='HomeLink' href='index.php'>Home</a>";
         } else {
-            $text = "Error<br /> Unknown Error.Please try again later.<br><a ' href='index.php'>Home</a>";
+            $text = "<span class='WarningText' >Error</span><br /> Unknown Error.Please try again later.<br><a class='HomeLink' href='index.php'>Home</a>";
         }
     }
 }

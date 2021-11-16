@@ -33,3 +33,12 @@ a{
     text-decoration: none;
     color:#ccc;
 }
+
+.HomeLink{
+    color:rgb(39, 158, 255);
+    padding-left:35%;
+}
+
+.WarningText{
+    color:rgb(187, 2, 2);
+}
