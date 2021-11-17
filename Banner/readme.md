@@ -1,0 +1,1 @@
+This basic banner example can use all type of web projects for ads or something like that. You can change header or footer or sidebar anywhere you want. 
